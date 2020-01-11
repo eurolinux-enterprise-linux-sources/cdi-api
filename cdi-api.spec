@@ -3,7 +3,7 @@
 
 Name:             cdi-api
 Version:          1.0
-Release:          11%{namedreltag}%{?dist}
+Release:          9%{namedreltag}%{?dist}
 Summary:          CDI API
 Group:            Development/Libraries
 License:          ASL 2.0
@@ -31,7 +31,6 @@ BuildRequires:    jboss-ejb-3.1-api
 BuildRequires:    geronimo-annotation
 BuildRequires:    geronimo-parent-poms
 BuildRequires:    weld-parent
-BuildRequires:    maven-plugin-build-helper
 
 Requires:         jpackage-utils
 Requires:         java
@@ -83,12 +82,6 @@ cp -rp target/site/apidocs/* %{buildroot}%{_javadocdir}/%{name}
 %{_javadocdir}/%{name}
 
 %changelog
-* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 1.0-11.SP4
-- Mass rebuild 2013-12-27
-
-* Wed Nov 13 2013 Mikolaj Izdebski <mizdebsk@redhat.com> - 1.0-10.SP4
-- Add BR: build-helper-maven-plugin
-
 * Sat Mar 02 2013 Mat Booth <fedora@matbooth.co.uk> - 1.0-9.SP4
 - Add missing BR, fixes FTBFS rhbz #913916
 
